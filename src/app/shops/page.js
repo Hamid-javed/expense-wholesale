@@ -98,7 +98,7 @@ export default async function ShopsPage() {
                 <TH className="text-right">Credit Limit</TH>
                 <TH className="text-right">Current Credit</TH>
                 <TH>Route</TH>
-                <TH>Status</TH>
+                <TH>Actions</TH>
               </TR>
             </THead>
             <TBody>

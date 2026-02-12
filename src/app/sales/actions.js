@@ -148,7 +148,7 @@ export async function createSale(formData) {
           const oldQuantity = existing.quantity;
           existing.quantity += newItem.quantity;
           existing.lineTotal = existing.quantity * existing.price;
-          
+
           // Track product updates (only for the new quantity)
           productUpdates.push({
             productId: newItem.productId,
@@ -159,7 +159,7 @@ export async function createSale(formData) {
         } else {
           // Different product: add as new item
           existingItemsMap.set(productIdStr, newItem);
-          
+
           // Track product updates
           productUpdates.push({
             productId: newItem.productId,
@@ -191,7 +191,7 @@ export async function createSale(formData) {
     } else {
       // Create new sale
       invoiceId = await getNextInvoiceNumber();
-      
+
       sale = await Sale.create({
         invoiceId,
         date,

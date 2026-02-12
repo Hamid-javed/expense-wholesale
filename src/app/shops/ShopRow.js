@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useFormStatus } from "react-dom";
 import { Table, TR, TD } from "../../components/ui/Table";
 import { Input } from "../../components/ui/Input";
@@ -87,6 +88,15 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
         <TD>{route?.name || "-"}</TD>
         <TD>
           <div className="flex items-center gap-2">
+            <Link href={`/shops/${shop._id}`}>
+              <Button
+                type="button"
+                variant="outline"
+                className="h-7 px-2 text-xs"
+              >
+                View
+              </Button>
+            </Link>
             <form action={toggleShopActive}>
               <input type="hidden" name="id" value={shop._id} />
               <Button
