@@ -19,10 +19,16 @@ export function AppShell({ children }) {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <div className="flex h-16 items-center border-b bg-white px-6 shadow-sm">
+      <div className="flex h-16 items-center justify-between border-b bg-white px-6 shadow-sm">
         <div className="text-lg font-semibold tracking-tight">
           Expense & Sales Manager
         </div>
+        <Link
+          href="/logout"
+          className="text-sm text-slate-600 hover:text-slate-900"
+        >
+          Sign out
+        </Link>
       </div>
       <div className="flex">
         <aside className="hidden w-56 border-r bg-white px-3 py-4 md:block">
@@ -32,7 +38,7 @@ export function AppShell({ children }) {
                 key={item.href}
                 href={item.href}
                 className={clsx(
-                  "flex items-center rounded-md px-3 py-2 hover:bg-slate-100",
+                  "flex items-center rounded-md px-3 py-2 hover:bg-slate-200 hover:text-black",
                   pathname === item.href
                     ? "bg-slate-900 text-white"
                     : "text-slate-700"

@@ -64,6 +64,29 @@ export async function createSale(formData) {
 
     const data = parsed.data;
 
+    // Validate: no zero quantity, and requested quantity must not exceed available
+    const productIds = [...new Set(data.items.map((it) => it.productId))];
+    const products = await Product.find({ _id: { $in: productIds } }).lean();
+    const productMap = new Map(products.map((p) => [p._id.toString(), p]));
+
+    for (const item of data.items) {
+      if (item.quantity <= 0) {
+        const p = productMap.get(item.productId);
+        const name = p?.name || item.productId;
+        return { error: `"${name}": quantity must be greater than zero.` };
+      }
+      const product = productMap.get(item.productId);
+      if (!product) {
+        return { error: "One or more products were not found." };
+      }
+      const available = product.quantity ?? 0;
+      if (item.quantity > available) {
+        return {
+          error: `"${product.name}": only ${available} available (requested ${item.quantity}).`,
+        };
+      }
+    }
+
     const date = parseDatePK(data.date); // Parse date in PK timezone
     const startOfDay = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0, 0);
     const endOfDay = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59, 999);
@@ -193,12 +216,8 @@ export async function createSale(formData) {
       }
     }
 
-    // Update shop credit if needed
-    if (creditUpdate > 0) {
-      await Shop.findByIdAndUpdate(data.shopId, {
-        $inc: { currentCredit: creditUpdate },
-      });
-    }
+    // Note: currentCredit is now managed manually from the shop page only
+    // Removed automatic currentCredit updates
 
     // Update product quantities and stats (only for new quantities)
     await Promise.all(

@@ -10,6 +10,7 @@ export function SalesForm({ staff, shops, products, createSale }) {
     { productId: "", quantity: "", price: "" },
   ]);
   const [paymentType, setPaymentType] = useState(PAYMENT_TYPES[0]);
+  const [formError, setFormError] = useState(null);
 
   const addRow = () => {
     setRows((prev) => [...prev, { productId: "", quantity: "", price: "" }]);
@@ -39,9 +40,34 @@ export function SalesForm({ staff, shops, products, createSale }) {
     0
   );
 
+  const getAvailable = (productId) => {
+    const p = products.find((x) => x._id === productId);
+    return p != null ? (p.quantity ?? 0) : null;
+  };
+
+  const getRowError = (row) => {
+    if (!row.productId) return null;
+    const qtyStr = String(row.quantity ?? "").trim();
+    const qty = Number(qtyStr);
+    // Only show "must be greater than zero" when user entered something invalid (0 or negative), not when field is empty
+    if (qtyStr !== "" && (isNaN(qty) || qty <= 0)) {
+      return "Quantity must be greater than zero.";
+    }
+    if (qtyStr !== "" && !isNaN(qty) && qty > 0) {
+      const available = getAvailable(row.productId);
+      if (available != null && qty > available) {
+        return `Only ${available} available.`;
+      }
+    }
+    return null;
+  };
+
+  const hasRowErrors = computedRows.some((row) => row.productId && getRowError(row));
+
   return (
     <form
       action={async (formData) => {
+        setFormError(null);
         formData.set("paymentType", paymentType);
         formData.set("itemCount", String(computedRows.length));
         computedRows.forEach((row, index) => {
@@ -50,11 +76,20 @@ export function SalesForm({ staff, shops, products, createSale }) {
           formData.set(`items[${index}][price]`, String(row.price || 0));
         });
 
-        await createSale(formData);
+        const result = await createSale(formData);
+        if (result?.error) {
+          setFormError(result.error);
+          return;
+        }
         setRows([{ productId: "", quantity: "", price: "" }]);
       }}
       className="space-y-4"
     >
+      {formError && (
+        <div className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
+          {formError}
+        </div>
+      )}
       <div className="grid gap-3 text-xs md:grid-cols-4 md:text-sm">
         <label className="flex flex-col gap-1 text-xs font-medium text-slate-600">
           <span>Staff</span>
@@ -152,16 +187,32 @@ export function SalesForm({ staff, shops, products, createSale }) {
                 </select>
               </TD>
               <TD className="text-right">
-                <input
-                  type="number"
-                  min="0"
-                  step="1"
-                  className="h-8 w-20 rounded-md border border-slate-300 bg-white px-2 text-right text-xs text-slate-900 shadow-sm outline-none focus:border-slate-500 focus:ring-1 focus:ring-slate-500"
-                  value={row.quantity}
-                  onChange={(e) =>
-                    onChangeRow(index, "quantity", e.target.value)
-                  }
-                />
+                <div className="flex flex-col items-end gap-0.5">
+                  <input
+                    type="number"
+                    min="0"
+                    step="1"
+                    className={`h-8 w-20 rounded-md border px-2 text-right text-xs text-slate-900 shadow-sm outline-none focus:ring-1 focus:ring-slate-500 ${
+                      getRowError(row)
+                        ? "border-red-500 focus:border-red-500"
+                        : "border-slate-300 bg-white focus:border-slate-500"
+                    }`}
+                    value={row.quantity}
+                    onChange={(e) =>
+                      onChangeRow(index, "quantity", e.target.value)
+                    }
+                  />
+                  {row.productId && (
+                    <span className="text-[10px] text-slate-500">
+                      Available: {getAvailable(row.productId) ?? 0}
+                    </span>
+                  )}
+                  {getRowError(row) && (
+                    <span className="text-[10px] text-red-600">
+                      {getRowError(row)}
+                    </span>
+                  )}
+                </div>
               </TD>
               <TD className="text-right">
                 <input
@@ -211,7 +262,9 @@ export function SalesForm({ staff, shops, products, createSale }) {
           <span className="text-sm font-semibold">
             Total: {grandTotal.toFixed(2)}
           </span>
-          <Button type="submit">Save sale</Button>
+          <Button type="submit" disabled={hasRowErrors}>
+            Save sale
+          </Button>
         </div>
       </div>
     </form>

@@ -11,6 +11,7 @@ const shopUpdateSchema = z.object({
   ownerName: z.string().optional(),
   phone: z.string().optional(),
   creditLimit: z.coerce.number().min(0).optional(),
+  currentCredit: z.coerce.number().min(0).optional(),
   routeId: z.string().optional(),
 });
 
@@ -53,6 +54,7 @@ export async function updateShop(formData) {
       ownerName: formData.get("ownerName")?.toString().trim() || "",
       phone: formData.get("phone")?.toString().trim() || "",
       creditLimit: formData.get("creditLimit")?.toString().trim() || "0",
+      currentCredit: formData.get("currentCredit")?.toString().trim() || "0",
       routeId: formData.get("routeId")?.toString().trim() || "",
     };
 
@@ -61,6 +63,21 @@ export async function updateShop(formData) {
     const shop = await Shop.findById(validated.id);
     if (!shop || shop.deletedAt) {
       return { error: "Shop not found" };
+    }
+
+    // Determine final creditLimit and currentCredit values
+    const finalCreditLimit = validated.creditLimit !== undefined 
+      ? validated.creditLimit 
+      : shop.creditLimit;
+    const finalCurrentCredit = validated.currentCredit !== undefined 
+      ? validated.currentCredit 
+      : shop.currentCredit;
+
+    // Validate: currentCredit cannot exceed creditLimit
+    if (finalCurrentCredit > finalCreditLimit) {
+      return { 
+        error: `Current Credit (${finalCurrentCredit}) cannot exceed Credit Limit (${finalCreditLimit}). Please increase Credit Limit first.` 
+      };
     }
 
     // Build update object
@@ -76,6 +93,9 @@ export async function updateShop(formData) {
     }
     if (validated.creditLimit !== undefined) {
       updateData.creditLimit = validated.creditLimit;
+    }
+    if (validated.currentCredit !== undefined) {
+      updateData.currentCredit = validated.currentCredit;
     }
     if (validated.routeId !== undefined) {
       updateData.routeId = validated.routeId || undefined;

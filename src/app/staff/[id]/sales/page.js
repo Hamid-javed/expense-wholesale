@@ -96,6 +96,76 @@ export default async function StaffSalesPage({ params, searchParams }) {
   );
   const totalSales = totalCash + totalCredit;
 
+  // Calculate total cash per shop for the selected date only
+  const salesForSelectedDate = await Sale.find({
+    staffId: id,
+    deletedAt: null,
+    date: {
+      $gte: startOfDay,
+      $lte: endOfDay,
+    },
+  })
+    .populate("shopId", "name")
+    .lean();
+
+  const cashByShop = {};
+  let selectedDateTotalSales = 0;
+  let selectedDateCashSales = 0;
+  let selectedDateCreditSales = 0;
+  let selectedDateShopCount = 0;
+
+  salesForSelectedDate.forEach((sale) => {
+    if (!sale.shopId) return;
+    const shopId = sale.shopId._id?.toString() || sale.shopId.toString();
+    const shopName = sale.shopId.name || "Unknown Shop";
+    
+    if (!cashByShop[shopId]) {
+      cashByShop[shopId] = {
+        name: shopName,
+        totalCash: 0,
+        totalAmount: 0,
+      };
+      selectedDateShopCount++;
+    }
+    
+    if (sale.paymentType === "cash") {
+      cashByShop[shopId].totalCash += sale.totalAmount || 0;
+      selectedDateCashSales += sale.totalAmount || 0;
+    } else if (sale.paymentType === "credit") {
+      selectedDateCreditSales += sale.totalAmount || 0;
+    }
+    cashByShop[shopId].totalAmount += sale.totalAmount || 0;
+    selectedDateTotalSales += sale.totalAmount || 0;
+  });
+
+  // Calculate today's sales (if selected date is not today)
+  let todayTotalSales = 0;
+  let todayCashSales = 0;
+  let todayCreditSales = 0;
+  let todaySales = [];
+
+  if (selectedDateStr !== todayStr) {
+    const todayStartOfDay = getStartOfDayPK(todayStr);
+    const todayEndOfDay = getEndOfDayPK(todayStr);
+    
+    todaySales = await Sale.find({
+      staffId: id,
+      deletedAt: null,
+      date: {
+        $gte: todayStartOfDay,
+        $lte: todayEndOfDay,
+      },
+    }).lean();
+
+    todayTotalSales = todaySales.reduce((sum, s) => sum + (s.totalAmount || 0), 0);
+    todayCashSales = todaySales
+      .filter((s) => s.paymentType === "cash")
+      .reduce((sum, s) => sum + (s.totalAmount || 0), 0);
+    todayCreditSales = todaySales
+      .filter((s) => s.paymentType === "credit")
+      .reduce((sum, s) => sum + (s.totalAmount || 0), 0);
+  }
+
   const route = staff.routeId
     ? await RouteModel.findById(staff.routeId).lean()
     : null;
@@ -172,6 +242,82 @@ export default async function StaffSalesPage({ params, searchParams }) {
           </CardBody>
         </Card>
       </div>
+
+      {/* Sales Summary for Selected Date */}
+      {Object.keys(cashByShop).length > 0 && (
+        <Card>
+          <CardHeader 
+            title={`Sales Summary - ${selectedDateStr === todayStr ? "Today" : selectedDateStr}`}
+            actions={
+              <a
+                href={`/api/invoices/combined/${id}?date=${selectedDateStr}`}
+                target="_blank"
+              >
+                <Button variant="outline" className="h-8 px-3 text-xs">
+                  Download Combined Invoice
+                </Button>
+              </a>
+            }
+          />
+          <CardBody>
+            <div className="mb-6">
+              <div className="bg-slate-50 p-6 rounded-lg inline-block">
+                <div className="text-sm text-slate-600 mb-2">Total Sales ({selectedDateStr === todayStr ? "Today" : selectedDateStr})</div>
+                <div className="text-3xl font-semibold text-slate-900">
+                  {selectedDateTotalSales.toLocaleString(undefined, {
+                    maximumFractionDigits: 2,
+                  })}
+                </div>
+              </div>
+            </div>
+            
+            <div className="border-t border-slate-200 pt-4">
+              <h4 className="text-sm font-semibold text-slate-700 mb-3">
+                Sales by Shop
+              </h4>
+              <Table>
+                <THead>
+                  <TR>
+                    <TH>Shop Name</TH>
+                    <TH className="text-right">Total Amount</TH>
+                  </TR>
+                </THead>
+                <TBody>
+                  {Object.values(cashByShop)
+                    .sort((a, b) => b.totalAmount - a.totalAmount)
+                    .map((shop) => (
+                      <TR key={shop.name}>
+                        <TD>{shop.name}</TD>
+                        <TD className="text-right font-medium">
+                          {shop.totalAmount.toLocaleString(undefined, {
+                            maximumFractionDigits: 2,
+                          })}
+                        </TD>
+                      </TR>
+                    ))}
+                </TBody>
+              </Table>
+            </div>
+          </CardBody>
+        </Card>
+      )}
+
+      {/* Today's Sales Summary (if not already shown) */}
+      {selectedDateStr !== todayStr && (
+        <Card>
+          <CardHeader title="Today's Sales" />
+          <CardBody>
+            <div className="bg-slate-50 p-6 rounded-lg inline-block">
+              <div className="text-sm text-slate-600 mb-2">Total Sales (Today)</div>
+              <div className="text-3xl font-semibold text-slate-900">
+                {todayTotalSales.toLocaleString(undefined, {
+                  maximumFractionDigits: 2,
+                })}
+              </div>
+            </div>
+          </CardBody>
+        </Card>
+      )}
 
       {/* Daily Summary Input for Selected Date (if no sales for this date) */}
       {!salesByDate[selectedDateStr] && (

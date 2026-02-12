@@ -33,32 +33,33 @@ export async function upsertDailySalesSummary(formData) {
     const startOfDay = getStartOfDayPK(validated.date);
     const endOfDay = getEndOfDayPK(validated.date);
 
-    // Calculate actual cash and credit totals from sales for this staff/date
+    // Calculate total sales amount for this staff/date
+    // Credit here means loans/credit given to shopkeepers, not credit sales
+    // So we need to ensure cashSales + creditSales doesn't exceed total sales
     const sales = await Sale.find({
       staffId: validated.staffId,
       deletedAt: null,
       date: { $gte: startOfDay, $lte: endOfDay },
     }).lean();
 
-    const actualCashTotal = sales
-      .filter((s) => s.paymentType === "cash")
-      .reduce((sum, s) => sum + (s.totalAmount || 0), 0);
+    // Total sales amount (sum of all sales regardless of paymentType)
+    const totalSalesAmount = sales.reduce(
+      (sum, s) => sum + (s.totalAmount || 0),
+      0
+    );
 
-    const actualCreditTotal = sales
-      .filter((s) => s.paymentType === "credit")
-      .reduce((sum, s) => sum + (s.totalAmount || 0), 0);
+    // Round to 2 decimals to avoid floating-point comparison issues
+    const round2 = (n) => Math.round(Number(n) * 100) / 100;
+    const cashEntered = round2(validated.cashSales);
+    const creditEntered = round2(validated.creditSales);
+    const totalEntered = round2(cashEntered + creditEntered);
+    const totalActual = round2(totalSalesAmount);
 
-    if (validated.cashSales > actualCashTotal) {
+    // Validate: cash + credit (loan) cannot exceed total sales amount
+    if (totalEntered > totalActual) {
       return {
         success: false,
-        error: `Daily cash cannot exceed actual cash sales.`,
-      };
-    }
-
-    if (validated.creditSales > actualCreditTotal) {
-      return {
-        success: false,
-        error: `Daily credit cannot exceed actual credit sales `,
+        error: `Daily cash + credit (loan) cannot exceed total sales amount (total sales: ${totalActual}).`,
       };
     }
 
@@ -165,12 +166,8 @@ export async function updateSaleItemQuantity(formData) {
       },
     });
 
-    // Update shop credit if this was a credit sale
-    if (sale.paymentType === "credit") {
-      await Shop.findByIdAndUpdate(sale.shopId, {
-        $inc: { currentCredit: saleTotalChange },
-      });
-    }
+    // Note: currentCredit is now managed manually from the shop page only
+    // Removed automatic currentCredit updates
 
     // Save the updated sale
     await sale.save();

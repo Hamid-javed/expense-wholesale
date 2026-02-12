@@ -1,7 +1,7 @@
 "use server";
 
 import mongoose from "mongoose";
-import { PAYMENT_TYPES } from "../lib/config";
+import { PAYMENT_TYPES } from "../lib/config.js";
 
 const SaleItemSchema = new mongoose.Schema(
   {

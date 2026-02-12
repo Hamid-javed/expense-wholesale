@@ -1,7 +1,7 @@
 "use server";
 
 import mongoose from "mongoose";
-import { ROLES } from "../lib/config";
+import { ROLES } from "../lib/config.js";
 
 const UserSchemaDef = new mongoose.Schema(
   {

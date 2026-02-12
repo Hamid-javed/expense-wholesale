@@ -115,8 +115,10 @@ export function RouteRow({
               </div>
             </form>
           ) : (
-            <div className="flex items-center gap-2">
-              <span className="font-medium text-slate-800">{route.name}</span>
+            <div className="flex items-center gap-2 w-[200px]">
+              <span className="font-medium text-slate-800" title={route.name}>
+                {route.name.length > 50 ? `${route.name.slice(0, 50)}...` : route.name}
+              </span>
               <button
                 type="button"
                 onClick={() => setIsEditing(true)}

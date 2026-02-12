@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
 import { connectToDatabase } from "../src/lib/db.js";
 import { Product } from "../src/models/Product.js";
 import { Staff } from "../src/models/Staff.js";
@@ -6,6 +7,8 @@ import { Shop } from "../src/models/Shop.js";
 import { RouteModel } from "../src/models/Route.js";
 import { User } from "../src/models/User.js";
 import { InvoiceCounter } from "../src/models/InvoiceCounter.js";
+
+const DEFAULT_ADMIN_PASSWORD = "admin123";
 
 async function main() {
   await connectToDatabase();
@@ -21,11 +24,11 @@ async function main() {
     InvoiceCounter.deleteMany({}),
   ]);
 
+  const passwordHash = await bcrypt.hash(DEFAULT_ADMIN_PASSWORD, 10);
   const admin = await User.create({
-    email: "admin@example.com",
+    email: "admin@gmail.com",
     name: "Admin User",
-    // This is a placeholder hash; integrate real auth later.
-    passwordHash: "CHANGE_ME_HASH",
+    passwordHash,
   });
 
   const routes = await RouteModel.insertMany([
@@ -75,7 +78,7 @@ async function main() {
 
   console.log("Seed complete.");
   console.log({
-    admin: { email: admin.email },
+    admin: { email: admin.email, password: DEFAULT_ADMIN_PASSWORD },
     routes: routes.map((r) => ({ id: r._id.toString(), name: r.name })),
     staff: staff.map((s) => ({ id: s._id.toString(), name: s.name })),
     shops: shops.map((s) => ({ id: s._id.toString(), name: s.name })),

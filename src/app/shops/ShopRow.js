@@ -41,6 +41,7 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
     ownerName: shop.ownerName || "",
     phone: shop.phone || "",
     creditLimit: shop.creditLimit || 0,
+    currentCredit: shop.currentCredit || 0,
     routeId: shop.routeId || "",
   });
 
@@ -63,6 +64,7 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
       ownerName: shop.ownerName || "",
       phone: shop.phone || "",
       creditLimit: shop.creditLimit || 0,
+      currentCredit: shop.currentCredit || 0,
       routeId: shop.routeId || "",
     });
     setIsEditing(false);
@@ -165,7 +167,19 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
         />
       </TD>
       <TD className="text-right">
-        {Number(shop.currentCredit || 0).toFixed(2)}
+        <Input
+          form={formId}
+          name="currentCredit"
+          type="number"
+          min="0"
+          step="0.01"
+          max={formData.creditLimit}
+          value={formData.currentCredit}
+          onChange={(e) =>
+            setFormData({ ...formData, currentCredit: e.target.value })
+          }
+          className="w-24"
+        />
       </TD>
       <TD>
         <select

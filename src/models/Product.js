@@ -1,7 +1,7 @@
 "use server";
 
 import mongoose from "mongoose";
-import { UNITS } from "../lib/config";
+import { UNITS } from "../lib/config.js";
 
 // Force schema recreation to ensure quantity field is included
 if (mongoose.models.Product) {
