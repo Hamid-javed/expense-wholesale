@@ -8,6 +8,7 @@ import { Card, CardBody, CardHeader } from "../../../components/ui/Card";
 import { Table, THead, TBody, TR, TH, TD } from "../../../components/ui/Table";
 import Link from "next/link";
 import { Button } from "../../../components/ui/Button";
+import { ShopDayReportPrompt } from "./ShopDayReportPrompt";
 import { getTodayPK, getStartOfDayPK, getEndOfDayPK, getDateKeyPK, formatDatePK, parseDatePK } from "../../../lib/dateUtils";
 
 export const dynamic = "force-dynamic";
@@ -231,13 +232,7 @@ export default async function ShopDetailPage({ params, searchParams }) {
                         maximumFractionDigits: 2,
                       })}
                     </span>
-                    <a
-                      href={`/api/invoices/shop/${id}?date=${dateKey}`}
-                      target="_blank"
-                      className="text-xs text-slate-600 underline hover:text-slate-900"
-                    >
-                      Download Day Report
-                    </a>
+                    <ShopDayReportPrompt shopId={id} reportDate={dateKey} />
                   </div>
                 }
               />

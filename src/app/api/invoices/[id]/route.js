@@ -7,9 +7,12 @@ import { RouteModel } from "../../../../models/Route";
 import { generateInvoicePdf } from "../../../../lib/invoice";
 import { INVOICE_PREFIX } from "../../../../lib/config";
 
-export async function GET(_req, { params }) {
+export async function GET(req, { params }) {
   await connectToDatabase();
   const { id } = await params;
+  const { searchParams } = new URL(req.url);
+  const otName = searchParams.get("ot") || null;
+  const dateStr = searchParams.get("date") || null;
 
   const sale = await Sale.findById(id).populate("shopId").populate("staffId");
   if (!sale) {
@@ -34,7 +37,10 @@ export async function GET(_req, { params }) {
       (m) => m.Product
     );
     const p = await product.findById(item.productId);
-    populatedItems.push({ ...item, product: p ? { name: p.name } : null });
+    populatedItems.push({
+      ...item,
+      product: p ? { name: p.name, sku: p.sku, unit: p.unit } : null,
+    });
   }
   populatedSale.items = populatedItems;
 
@@ -42,6 +48,8 @@ export async function GET(_req, { params }) {
     shop,
     staff,
     route,
+    otName,
+    otDate: dateStr,
   });
 
   const response = new NextResponse(bytes, {

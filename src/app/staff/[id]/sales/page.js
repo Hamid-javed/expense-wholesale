@@ -10,6 +10,7 @@ import Link from "next/link";
 import { Button } from "../../../../components/ui/Button";
 import { DailySummaryForm } from "./DailySummaryForm";
 import { QuantityEditor } from "./QuantityEditor";
+import { InvoiceDownloadPrompt } from "./InvoiceDownloadPrompt";
 import { getTodayPK, getStartOfDayPK, getEndOfDayPK, getDateKeyPK, formatDatePK, parseDatePK } from "../../../../lib/dateUtils";
 
 export const dynamic = "force-dynamic";
@@ -118,7 +119,7 @@ export default async function StaffSalesPage({ params, searchParams }) {
     if (!sale.shopId) return;
     const shopId = sale.shopId._id?.toString() || sale.shopId.toString();
     const shopName = sale.shopId.name || "Unknown Shop";
-    
+
     if (!cashByShop[shopId]) {
       cashByShop[shopId] = {
         name: shopName,
@@ -127,7 +128,7 @@ export default async function StaffSalesPage({ params, searchParams }) {
       };
       selectedDateShopCount++;
     }
-    
+
     if (sale.paymentType === "cash") {
       cashByShop[shopId].totalCash += sale.totalAmount || 0;
       selectedDateCashSales += sale.totalAmount || 0;
@@ -147,7 +148,7 @@ export default async function StaffSalesPage({ params, searchParams }) {
   if (selectedDateStr !== todayStr) {
     const todayStartOfDay = getStartOfDayPK(todayStr);
     const todayEndOfDay = getEndOfDayPK(todayStr);
-    
+
     todaySales = await Sale.find({
       staffId: id,
       deletedAt: null,
@@ -246,7 +247,7 @@ export default async function StaffSalesPage({ params, searchParams }) {
       {/* Sales Summary for Selected Date */}
       {Object.keys(cashByShop).length > 0 && (
         <Card>
-          <CardHeader 
+          <CardHeader
             title={`Sales Summary - ${selectedDateStr === todayStr ? "Today" : selectedDateStr}`}
             actions={
               <a
@@ -270,7 +271,7 @@ export default async function StaffSalesPage({ params, searchParams }) {
                 </div>
               </div>
             </div>
-            
+
             <div className="border-t border-slate-200 pt-4">
               <h4 className="text-sm font-semibold text-slate-700 mb-3">
                 Sales by Shop
@@ -303,7 +304,7 @@ export default async function StaffSalesPage({ params, searchParams }) {
       )}
 
       {/* Today's Sales Summary (if not already shown) */}
-      {selectedDateStr !== todayStr && (
+      {/* {selectedDateStr !== todayStr && (
         <Card>
           <CardHeader title="Today's Sales" />
           <CardBody>
@@ -317,10 +318,10 @@ export default async function StaffSalesPage({ params, searchParams }) {
             </div>
           </CardBody>
         </Card>
-      )}
+      )} */}
 
       {/* Daily Summary Input for Selected Date (if no sales for this date) */}
-      {!salesByDate[selectedDateStr] && (
+      {/* {!salesByDate[selectedDateStr] && (
         <Card>
           <CardHeader title="Daily Sales Summary" />
           <CardBody>
@@ -335,7 +336,7 @@ export default async function StaffSalesPage({ params, searchParams }) {
             />
           </CardBody>
         </Card>
-      )}
+      )} */}
 
       {/* Sales grouped by date */}
       {sortedDates.length === 0 ? (
@@ -428,13 +429,7 @@ export default async function StaffSalesPage({ params, searchParams }) {
                                 maximumFractionDigits: 2,
                               })}
                             </div>
-                            <a
-                              href={`/api/invoices/${sale._id}`}
-                              target="_blank"
-                              className="text-xs text-slate-600 underline hover:text-slate-900"
-                            >
-                              Download invoice
-                            </a>
+                            <InvoiceDownloadPrompt saleId={sale._id.toString()} />
                           </div>
                         </div>
                         <Table>
