@@ -5,11 +5,22 @@ import { connectToDatabase } from "../../lib/db";
 import { Shop } from "../../models/Shop";
 import { z } from "zod";
 
+/** Get form value, supporting prefixed keys like "1_cnic" from serialized forms */
+function getFormValue(formData, key) {
+  let val = formData.get(key);
+  if (val != null && val !== "") return val;
+  for (const [k, v] of formData.entries()) {
+    if (k === key || k.endsWith("_" + key)) return v;
+  }
+  return null;
+}
+
 const shopUpdateSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1).optional(),
   ownerName: z.string().optional(),
   phone: z.string().optional(),
+  cnic: z.string().optional(),
   creditLimit: z.coerce.number().min(0).optional(),
   currentCredit: z.coerce.number().min(0).optional(),
   routeId: z.string().optional(),
@@ -18,11 +29,12 @@ const shopUpdateSchema = z.object({
 export async function createShop(formData) {
   try {
     await connectToDatabase();
-    const name = formData.get("name")?.trim();
-    const ownerName = formData.get("ownerName")?.trim();
-    const phone = formData.get("phone")?.trim();
-    const creditLimit = Number(formData.get("creditLimit") || 0);
-    const routeId = formData.get("routeId")?.trim() || null;
+    const name = getFormValue(formData, "name")?.toString().trim();
+    const ownerName = getFormValue(formData, "ownerName")?.toString().trim();
+    const phone = getFormValue(formData, "phone")?.toString().trim();
+    const cnic = getFormValue(formData, "cnic")?.toString().trim();
+    const creditLimit = Number(getFormValue(formData, "creditLimit") || 0);
+    const routeId = getFormValue(formData, "routeId")?.toString().trim() || null;
 
     if (!name) {
       return { error: "Name is required" };
@@ -32,6 +44,7 @@ export async function createShop(formData) {
       name,
       ownerName: ownerName || undefined,
       phone: phone || undefined,
+      cnic: cnic || undefined,
       creditLimit,
       routeId: routeId || undefined,
     });
@@ -49,13 +62,14 @@ export async function updateShop(formData) {
     await connectToDatabase();
 
     const rawData = {
-      id: formData.get("id")?.toString().trim(),
-      name: formData.get("name")?.toString().trim(),
-      ownerName: formData.get("ownerName")?.toString().trim() || "",
-      phone: formData.get("phone")?.toString().trim() || "",
-      creditLimit: formData.get("creditLimit")?.toString().trim() || "0",
-      currentCredit: formData.get("currentCredit")?.toString().trim() || "0",
-      routeId: formData.get("routeId")?.toString().trim() || "",
+      id: getFormValue(formData, "id")?.toString().trim(),
+      name: getFormValue(formData, "name")?.toString().trim(),
+      ownerName: getFormValue(formData, "ownerName")?.toString().trim() || "",
+      phone: getFormValue(formData, "phone")?.toString().trim() || "",
+      cnic: getFormValue(formData, "cnic")?.toString().trim() || "",
+      creditLimit: getFormValue(formData, "creditLimit")?.toString().trim() || "0",
+      currentCredit: getFormValue(formData, "currentCredit")?.toString().trim() || "0",
+      routeId: getFormValue(formData, "routeId")?.toString().trim() || "",
     };
 
     const validated = shopUpdateSchema.parse(rawData);
@@ -90,6 +104,9 @@ export async function updateShop(formData) {
     }
     if (validated.phone !== undefined) {
       updateData.phone = validated.phone || undefined;
+    }
+    if (validated.cnic !== undefined) {
+      updateData.cnic = validated.cnic || undefined;
     }
     if (validated.creditLimit !== undefined) {
       updateData.creditLimit = validated.creditLimit;

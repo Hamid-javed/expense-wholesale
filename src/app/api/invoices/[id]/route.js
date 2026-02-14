@@ -20,10 +20,10 @@ export async function GET(req, { params }) {
   }
 
   const shop = sale.shopId
-    ? await Shop.findById(sale.shopId._id || sale.shopId)
+    ? (await Shop.findById(sale.shopId._id || sale.shopId).lean())
     : null;
   const staff = sale.staffId
-    ? await Staff.findById(sale.staffId._id || sale.staffId)
+    ? (await Staff.findById(sale.staffId._id || sale.staffId).lean())
     : null;
   const route = staff?.routeId
     ? await RouteModel.findById(staff.routeId)

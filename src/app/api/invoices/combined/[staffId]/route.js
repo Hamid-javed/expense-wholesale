@@ -12,7 +12,7 @@ export async function GET(req, { params }) {
   const { searchParams } = new URL(req.url);
   const dateStr = searchParams.get("date");
 
-  const staff = await Staff.findById(staffId);
+  const staff = await Staff.findById(staffId).lean();
   if (!staff) {
     return NextResponse.json({ error: "Staff not found" }, { status: 404 });
   }
@@ -52,6 +52,7 @@ export async function GET(req, { params }) {
       shopMap.set(id, {
         name,
         phone,
+        cnic: shop.cnic || "",
         totalAmount: 0,
       });
     }
@@ -70,7 +71,7 @@ export async function GET(req, { params }) {
   }
 
   const bytes = await generateCombinedInvoicePdf(shops, {
-    staff: staff.toObject ? staff.toObject() : staff,
+    staff,
     route,
     dateStr,
   });

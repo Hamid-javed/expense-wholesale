@@ -62,6 +62,15 @@ export default async function ShopsPage() {
               placeholder="Optional"
             />
             <Input
+              label="CNIC"
+              name="cnic"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              className="w-36"
+              placeholder="e.g. 3130302876477"
+            />
+            <Input
               label="Credit limit"
               name="creditLimit"
               type="number"
@@ -95,6 +104,7 @@ export default async function ShopsPage() {
                 <TH>Name</TH>
                 <TH>Owner</TH>
                 <TH>Phone</TH>
+                <TH>CNIC</TH>
                 <TH className="text-right">Credit Limit</TH>
                 <TH className="text-right">Current Credit</TH>
                 <TH>Route</TH>

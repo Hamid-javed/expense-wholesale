@@ -3,11 +3,6 @@
 import mongoose from "mongoose";
 import { UNITS } from "../lib/config.js";
 
-// Force schema recreation to ensure quantity field is included
-if (mongoose.models.Product) {
-  delete mongoose.models.Product;
-}
-
 const ProductSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, trim: true },
@@ -26,5 +21,6 @@ const ProductSchema = new mongoose.Schema(
   }
 );
 
-export const Product = mongoose.model("Product", ProductSchema);
+export const Product =
+  mongoose.models.Product || mongoose.model("Product", ProductSchema);
 

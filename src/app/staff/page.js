@@ -7,7 +7,8 @@ import { Table, THead, TBody, TR, TH, TD } from "../../components/ui/Table";
 import { Input } from "../../components/ui/Input";
 import { Button } from "../../components/ui/Button";
 import Link from "next/link";
-import { createStaff, toggleStaffActive } from "./actions";
+import { createStaff, updateStaff, toggleStaffActive } from "./actions";
+import { StaffRow } from "./StaffRow";
 
 export const dynamic = "force-dynamic";
 
@@ -55,6 +56,15 @@ export default async function StaffPage() {
               className="w-40 md:w-48"
               placeholder="Optional"
             />
+            <Input
+              label="CNIC"
+              name="cnic"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              className="w-36"
+              placeholder="e.g. 3130302876477"
+            />
             <label className="flex flex-col gap-1 text-xs font-medium text-slate-600">
               <span>Route</span>
               <select
@@ -79,6 +89,7 @@ export default async function StaffPage() {
               <TR>
                 <TH>Name</TH>
                 <TH>Phone</TH>
+                <TH>CNIC</TH>
                 <TH>Staff ID</TH>
                 <TH>Route</TH>
                 <TH>Status</TH>
@@ -86,45 +97,15 @@ export default async function StaffPage() {
               </TR>
             </THead>
             <TBody>
-              {staff.map((s) => {
-                const route = routes.find((r) => r._id === s.routeId);
-                return (
-                  <TR key={s._id}>
-                    <TD>
-                      <Link
-                        href={`/staff/${s._id}/sales`}
-                        className="font-medium text-slate-800 hover:text-slate-900 hover:underline"
-                      >
-                        {s.name}
-                      </Link>
-                    </TD>
-                    <TD className="text-slate-600">{s.phone}</TD>
-                    <TD className="font-mono text-xs text-slate-700">
-                      {s.staffId}
-                    </TD>
-                    <TD>{route?.name || "-"}</TD>
-                    <TD>
-                      <form action={toggleStaffActive}>
-                        <input type="hidden" name="id" value={s._id} />
-                        <Button
-                          type="submit"
-                          variant={s.isActive ? "outline" : "ghost"}
-                          className="h-7 px-2 text-xs"
-                        >
-                          {s.isActive ? "Active" : "Inactive"}
-                        </Button>
-                      </form>
-                    </TD>
-                    <TD className="text-right">
-                      <Link href={`/staff/${s._id}/sales`}>
-                        <Button variant="outline" className="h-7 px-2 text-xs">
-                          View Sales
-                        </Button>
-                      </Link>
-                    </TD>
-                  </TR>
-                );
-              })}
+              {staff.map((s) => (
+                <StaffRow
+                  key={s._id}
+                  staff={s}
+                  routes={routes}
+                  updateStaff={updateStaff}
+                  toggleStaffActive={toggleStaffActive}
+                />
+              ))}
             </TBody>
           </Table>
         </CardBody>

@@ -100,6 +100,7 @@ export default async function ShopDetailPage({ params, searchParams }) {
           <div className="space-y-1">
             {shop.ownerName && <div>Owner: {shop.ownerName}</div>}
             {shop.phone && <div>Phone: {shop.phone}</div>}
+            {shop.cnic && <div>CNIC: {shop.cnic}</div>}
             {route && <div>Route: {route.name}</div>}
           </div>
         }

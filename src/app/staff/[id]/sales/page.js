@@ -1,6 +1,7 @@
 import { connectToDatabase } from "../../../../lib/db";
 import { Staff } from "../../../../models/Staff";
 import { Sale } from "../../../../models/Sale";
+import "../../../../models/Product"; // Register Product for Sale.populate("items.productId")
 import { DailySalesSummary } from "../../../../models/DailySalesSummary";
 import { RouteModel } from "../../../../models/Route";
 import { PageHeader } from "../../../../components/layout/PageHeader";

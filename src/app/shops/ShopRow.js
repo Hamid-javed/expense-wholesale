@@ -41,6 +41,7 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
     name: shop.name,
     ownerName: shop.ownerName || "",
     phone: shop.phone || "",
+    cnic: shop.cnic || "",
     creditLimit: shop.creditLimit || 0,
     currentCredit: shop.currentCredit || 0,
     routeId: shop.routeId || "",
@@ -64,6 +65,7 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
       name: shop.name,
       ownerName: shop.ownerName || "",
       phone: shop.phone || "",
+      cnic: shop.cnic || "",
       creditLimit: shop.creditLimit || 0,
       currentCredit: shop.currentCredit || 0,
       routeId: shop.routeId || "",
@@ -79,6 +81,7 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
         <TD>{shop.name}</TD>
         <TD className="text-slate-600">{shop.ownerName || "-"}</TD>
         <TD className="text-slate-600">{shop.phone || "-"}</TD>
+        <TD className="text-slate-600 font-mono text-xs">{shop.cnic || "-"}</TD>
         <TD className="text-right">
           {Number(shop.creditLimit || 0).toFixed(2)}
         </TD>
@@ -160,6 +163,18 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
             setFormData({ ...formData, phone: e.target.value })
           }
           className="w-24"
+        />
+      </TD>
+      <TD>
+        <Input
+          form={formId}
+          name="cnic"
+          value={formData.cnic}
+          onChange={(e) =>
+            setFormData({ ...formData, cnic: e.target.value })
+          }
+          className="w-28"
+          placeholder="CNIC"
         />
       </TD>
       <TD className="text-right">
