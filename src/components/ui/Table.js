@@ -32,7 +32,7 @@ export function TH({ children, className }) {
   return (
     <th
       scope="col"
-      className={clsx("px-3 py-2 text-left font-medium", className)}
+      className={clsx("px-2 py-2 text-left font-medium sm:px-3", className)}
     >
       {children}
     </th>
@@ -41,7 +41,12 @@ export function TH({ children, className }) {
 
 export function TD({ children, className }) {
   return (
-    <td className={clsx("whitespace-nowrap px-3 py-2 align-middle", className)}>
+    <td
+      className={clsx(
+        "whitespace-nowrap px-2 py-2 align-middle sm:px-3",
+        className
+      )}
+    >
       {children}
     </td>
   );

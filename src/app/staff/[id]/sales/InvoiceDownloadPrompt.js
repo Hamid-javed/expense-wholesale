@@ -43,7 +43,7 @@ export function InvoiceDownloadPrompt({ saleId }) {
             aria-hidden
           />
           <div
-            className="relative z-10 w-full max-w-sm rounded-lg bg-white p-6 shadow-xl"
+            className="relative z-10 mx-4 w-full max-w-sm rounded-lg bg-white p-4 shadow-xl sm:mx-0 sm:p-6"
             role="dialog"
             aria-modal="true"
             aria-labelledby="invoice-dialog-title"

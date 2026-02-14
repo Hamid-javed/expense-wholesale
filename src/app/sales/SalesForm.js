@@ -90,7 +90,7 @@ export function SalesForm({ staff, shops, products, createSale }) {
           {formError}
         </div>
       )}
-      <div className="grid gap-3 text-xs md:grid-cols-4 md:text-sm">
+      <div className="grid grid-cols-1 gap-3 text-xs sm:grid-cols-2 md:grid-cols-4 md:text-sm">
         <label className="flex flex-col gap-1 text-xs font-medium text-slate-600">
           <span>Staff</span>
           <select

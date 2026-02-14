@@ -104,8 +104,8 @@ export default async function ShopDetailPage({ params, searchParams }) {
           </div>
         }
         actions={
-          <div className="flex items-center gap-2">
-            <form className="flex items-center gap-2" method="GET">
+          <div className="flex flex-wrap items-center gap-2">
+            <form className="flex flex-wrap items-center gap-2" method="GET">
               <label className="flex items-center gap-2 text-xs font-medium text-slate-600">
                 <span>Date</span>
                 <input
@@ -129,7 +129,7 @@ export default async function ShopDetailPage({ params, searchParams }) {
       />
 
       {/* Shop Info & Summary Cards */}
-      <div className="grid gap-4 md:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader title="Total Sales" />
           <CardBody>
@@ -173,7 +173,7 @@ export default async function ShopDetailPage({ params, searchParams }) {
         <Card>
           <CardHeader title="Staff Members" />
           <CardBody>
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {staffMembers.map((staff) => {
                 const staffSales = allSales.filter(
                   (s) => (s.staffId?._id?.toString() || s.staffId?.toString()) === staff._id.toString()
@@ -245,7 +245,7 @@ export default async function ShopDetailPage({ params, searchParams }) {
                         key={sale._id.toString()}
                         className="border-l-4 border-slate-300 pl-4"
                       >
-                        <div className="mb-2 flex items-center justify-between">
+                        <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                           <div>
                             <h3 className="font-semibold text-slate-900">
                               Invoice: {sale.invoiceId}

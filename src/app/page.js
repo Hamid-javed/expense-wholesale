@@ -50,7 +50,7 @@ export default async function DashboardPage() {
         description="Overview of sales performance, credit, and top products."
       />
 
-      <div className="grid gap-4 md:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader title="Today&apos;s Sales" />
           <CardBody>
