@@ -47,7 +47,6 @@ export default async function SalesPage() {
     name: s.name,
     ownerName: s.ownerName || "",
     phone: s.phone || "",
-    creditLimit: s.creditLimit ?? 0,
     currentCredit: s.currentCredit ?? 0,
     routeId: s.routeId?.toString() || null,
     isActive: s.isActive,

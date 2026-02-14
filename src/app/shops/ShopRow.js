@@ -42,7 +42,6 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
     ownerName: shop.ownerName || "",
     phone: shop.phone || "",
     cnic: shop.cnic || "",
-    creditLimit: shop.creditLimit || 0,
     currentCredit: shop.currentCredit || 0,
     routeId: shop.routeId || "",
   });
@@ -66,7 +65,6 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
       ownerName: shop.ownerName || "",
       phone: shop.phone || "",
       cnic: shop.cnic || "",
-      creditLimit: shop.creditLimit || 0,
       currentCredit: shop.currentCredit || 0,
       routeId: shop.routeId || "",
     });
@@ -82,9 +80,6 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
         <TD className="text-slate-600">{shop.ownerName || "-"}</TD>
         <TD className="text-slate-600">{shop.phone || "-"}</TD>
         <TD className="text-slate-600 font-mono text-xs">{shop.cnic || "-"}</TD>
-        <TD className="text-right">
-          {Number(shop.creditLimit || 0).toFixed(2)}
-        </TD>
         <TD className="text-right">
           {Number(shop.currentCredit || 0).toFixed(2)}
         </TD>
@@ -180,25 +175,10 @@ export function ShopRow({ shop, routes, updateShop, toggleShopActive }) {
       <TD className="text-right">
         <Input
           form={formId}
-          name="creditLimit"
-          type="number"
-          min="0"
-          step="0.01"
-          value={formData.creditLimit}
-          onChange={(e) =>
-            setFormData({ ...formData, creditLimit: e.target.value })
-          }
-          className="w-24"
-        />
-      </TD>
-      <TD className="text-right">
-        <Input
-          form={formId}
           name="currentCredit"
           type="number"
           min="0"
           step="0.01"
-          max={formData.creditLimit}
           value={formData.currentCredit}
           onChange={(e) =>
             setFormData({ ...formData, currentCredit: e.target.value })

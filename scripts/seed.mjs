@@ -55,14 +55,12 @@ async function main() {
     {
       name: "Alpha Store",
       phone: "555-0001",
-      creditLimit: 1000,
       currentCredit: 0,
       routeId: routes[0]._id,
     },
     {
       name: "Beta Market",
       phone: "555-0002",
-      creditLimit: 1500,
       currentCredit: 0,
       routeId: routes[1]._id,
     },

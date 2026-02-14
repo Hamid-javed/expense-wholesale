@@ -6,7 +6,7 @@ export function PageHeader({ title, description, actions }) {
           {title}
         </h1>
         {description && (
-          <div className="mt-1 text-sm text-slate-500 break-words">
+          <div className="mt-1 text-sm text-slate-500 wrap-break-word">
             {description}
           </div>
         )}

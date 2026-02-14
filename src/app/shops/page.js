@@ -34,7 +34,7 @@ export default async function ShopsPage() {
     <div className="space-y-4">
       <PageHeader
         title="Shops"
-        description="Manage shops, credit limits, and active status."
+        description="Manage shops and active status."
       />
       <Card>
         <CardBody>
@@ -70,15 +70,6 @@ export default async function ShopsPage() {
               className="w-36"
               placeholder="e.g. 3130302876477"
             />
-            <Input
-              label="Credit limit"
-              name="creditLimit"
-              type="number"
-              min="0"
-              step="0.01"
-              className="w-32"
-              placeholder="0.00"
-            />
             <label className="flex flex-col gap-1 text-xs font-medium text-slate-600">
               <span>Route</span>
               <select
@@ -105,7 +96,6 @@ export default async function ShopsPage() {
                 <TH>Owner</TH>
                 <TH>Phone</TH>
                 <TH>CNIC</TH>
-                <TH className="text-right">Credit Limit</TH>
                 <TH className="text-right">Current Credit</TH>
                 <TH>Route</TH>
                 <TH>Actions</TH>

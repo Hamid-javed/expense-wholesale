@@ -8,7 +8,6 @@ const ShopSchemaDef = new mongoose.Schema(
     ownerName: { type: String, trim: true },
     phone: { type: String, trim: true },
     cnic: { type: String, trim: true },
-    creditLimit: { type: Number, default: 0 },
     currentCredit: { type: Number, default: 0 },
     routeId: { type: mongoose.Schema.Types.ObjectId, ref: "Route" },
     isActive: { type: Boolean, default: true },
