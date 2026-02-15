@@ -58,12 +58,14 @@ export function AppShell({ children }) {
             Expense & Sales Manager
           </h1>
         </div>
-        <Link
-          href="/logout"
-          className="shrink-0 text-sm text-slate-600 hover:text-slate-900"
-        >
-          Sign out
-        </Link>
+        <form action="/logout" method="POST" className="shrink-0">
+          <button
+            type="submit"
+            className="text-sm text-slate-600 hover:text-slate-900"
+          >
+            Sign out
+          </button>
+        </form>
       </header>
 
       <div className="flex">

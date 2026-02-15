@@ -8,7 +8,6 @@ function redirectToLogin(request) {
 }
 
 export async function GET(request) {
-  await removeAuthCookie();
   return redirectToLogin(request);
 }
 

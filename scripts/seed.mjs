@@ -8,7 +8,7 @@ import { RouteModel } from "../src/models/Route.js";
 import { User } from "../src/models/User.js";
 import { InvoiceCounter } from "../src/models/InvoiceCounter.js";
 
-const DEFAULT_ADMIN_PASSWORD = "admin123";
+const DEFAULT_ADMIN_PASSWORD = "alrazaqtraders";
 
 async function main() {
   await connectToDatabase();
@@ -26,8 +26,8 @@ async function main() {
 
   const passwordHash = await bcrypt.hash(DEFAULT_ADMIN_PASSWORD, 10);
   const admin = await User.create({
-    email: "admin@gmail.com",
-    name: "Admin User",
+    email: "admin@alrazaqtraders.com",
+    name: "Al-Razaq Traders",
     passwordHash,
   });
 

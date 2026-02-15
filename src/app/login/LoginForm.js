@@ -7,12 +7,18 @@ import { Button } from "../../components/ui/Button";
 
 export function LoginForm() {
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmit(formData) {
     setError(null);
-    const result = await login(formData);
-    if (result?.error) {
-      setError(result.error);
+    setLoading(true);
+    try {
+      const result = await login(formData);
+      if (result?.error) {
+        setError(result.error);
+      }
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -30,6 +36,7 @@ export function LoginForm() {
         required
         autoComplete="email"
         placeholder="admin@example.com"
+        disabled={loading}
       />
       <Input
         label="Password"
@@ -38,9 +45,10 @@ export function LoginForm() {
         required
         autoComplete="current-password"
         placeholder="••••••••"
+        disabled={loading}
       />
-      <Button type="submit" className="w-full">
-        Sign in
+      <Button type="submit" className="w-full" disabled={loading}>
+        {loading ? "Signing in…" : "Sign in"}
       </Button>
     </form>
   );

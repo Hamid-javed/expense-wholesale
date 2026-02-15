@@ -1,6 +1,6 @@
 import { SignJWT, jwtVerify } from "jose";
 import bcrypt from "bcryptjs";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 
 const SALT_ROUNDS = 10;
 const TOKEN_COOKIE_NAME = "auth_token";
@@ -36,9 +36,11 @@ export async function verifyToken(token) {
 
 export async function setAuthCookie(token) {
   const cookieStore = await cookies();
+  const h = await headers();
+  const secure = h.get("x-forwarded-proto") === "https";
   cookieStore.set(TOKEN_COOKIE_NAME, token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
+    secure,
     sameSite: "lax",
     maxAge: TOKEN_MAX_AGE,
     path: "/",
