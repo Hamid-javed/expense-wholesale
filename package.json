@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "node scripts/seed.mjs"
+    "seed": "node --env-file=.env scripts/seed.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

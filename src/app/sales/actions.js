@@ -182,16 +182,21 @@ export async function createSale(formData) {
         creditUpdate = newTotalAmount; // Add new credit amount
       }
 
-      // Update existing sale
+      // Update existing sale: set cash/credit for merged total from new payment
+      const newCash = data.paymentType === "cash" ? newTotalAmount : 0;
+      const newCredit = data.paymentType === "credit" ? newTotalAmount : 0;
       existingSale.items = mergedItems;
       existingSale.totalAmount = mergedTotalAmount;
-      // Keep original payment type
+      existingSale.cashCollected = (existingSale.cashCollected ?? 0) + newCash;
+      existingSale.creditRemaining = (existingSale.creditRemaining ?? 0) + newCredit;
       await existingSale.save();
       sale = existingSale;
     } else {
       // Create new sale
       invoiceId = await getNextInvoiceNumber();
 
+      const cashCollected = data.paymentType === "cash" ? newTotalAmount : 0;
+      const creditRemaining = data.paymentType === "credit" ? newTotalAmount : 0;
       sale = await Sale.create({
         invoiceId,
         date,
@@ -200,6 +205,8 @@ export async function createSale(formData) {
         items: itemsWithTotals,
         totalAmount: newTotalAmount,
         paymentType: data.paymentType,
+        cashCollected,
+        creditRemaining,
       });
 
       // Track all product updates for new sale
@@ -235,12 +242,89 @@ export async function createSale(formData) {
     revalidatePath("/sales");
     revalidatePath("/");
     revalidatePath("/products");
+    revalidatePath("/reports");
     revalidatePath(`/staff/${data.staffId}/sales`);
+    revalidatePath(`/shops/${data.shopId}`);
 
     return { success: true, saleId: sale._id.toString(), invoiceId };
   } catch (error) {
     console.error("Error creating sale:", error);
     return { error: error.message || "Failed to create sale" };
+  }
+}
+
+export async function updateSaleCashCredit(formData) {
+  try {
+    await connectToDatabase();
+    const saleId = formData.get("saleId")?.trim();
+    const shopId = formData.get("shopId")?.trim();
+    const cashCollected = Number(formData.get("cashCollected"));
+    const creditRemaining = Number(formData.get("creditRemaining"));
+
+    if (!saleId) {
+      return { error: "Missing sale id" };
+    }
+    if (Number.isNaN(cashCollected) || cashCollected < 0) {
+      return { error: "Cash collected must be a non-negative number." };
+    }
+    if (Number.isNaN(creditRemaining) || creditRemaining < 0) {
+      return { error: "Credit remaining must be a non-negative number." };
+    }
+
+    const sale = await Sale.findById(saleId);
+    if (!sale || sale.deletedAt) {
+      return { error: "Sale not found" };
+    }
+
+    const total = sale.totalAmount ?? 0;
+    if (cashCollected + creditRemaining > total) {
+      return {
+        error: `Cash + credit (${(cashCollected + creditRemaining).toFixed(2)}) cannot exceed invoice total (${total.toFixed(2)}).`,
+      };
+    }
+
+    sale.cashCollected = cashCollected;
+    sale.creditRemaining = creditRemaining;
+    await sale.save();
+
+    if (shopId) {
+      revalidatePath(`/shops/${shopId}`);
+    }
+    revalidatePath("/reports");
+    return { success: true };
+  } catch (error) {
+    console.error("Error updating sale cash/credit:", error);
+    return { error: error.message || "Failed to update cash/credit" };
+  }
+}
+
+export async function toggleSaleStatus(formData) {
+  try {
+    await connectToDatabase();
+    const saleId = formData.get("saleId")?.trim();
+    const shopId = formData.get("shopId")?.trim();
+    if (!saleId) {
+      return { error: "Missing sale id" };
+    }
+
+    const sale = await Sale.findById(saleId);
+    if (!sale || sale.deletedAt) {
+      return { error: "Sale not found" };
+    }
+
+    sale.status = sale.status === "paid" ? "unpaid" : "paid";
+    await sale.save();
+
+    if (shopId) {
+      revalidatePath(`/shops/${shopId}`);
+    } else {
+      revalidatePath("/shops");
+    }
+    revalidatePath("/reports");
+    return { success: true };
+  } catch (error) {
+    console.error("Error toggling sale status:", error);
+    return { error: error.message || "Failed to update sale status" };
   }
 }
 

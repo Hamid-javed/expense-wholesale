@@ -1,0 +1,550 @@
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/products","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164374942}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/products"},"hypothesisId":"H3","timestamp":1771164374944}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/.well-known/appspecific/com.chrome.devtools.json","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164375216}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/.well-known/appspecific/com.chrome.devtools.json"},"hypothesisId":"H3","timestamp":1771164375219}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/products","isPublic":false,"hasToken":false},"hypothesisId":"H1","timestamp":1771164399090}
+{"location":"src/middleware.js:redirect","message":"redirect to login (no token)","data":{"pathname":"/products"},"hypothesisId":"H2","timestamp":1771164399090}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/login","isPublic":true,"hasToken":false},"hypothesisId":"H1","timestamp":1771164399108}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/.well-known/appspecific/com.chrome.devtools.json","isPublic":false,"hasToken":false},"hypothesisId":"H1","timestamp":1771164401887}
+{"location":"src/middleware.js:redirect","message":"redirect to login (no token)","data":{"pathname":"/.well-known/appspecific/com.chrome.devtools.json"},"hypothesisId":"H2","timestamp":1771164401887}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/login","isPublic":true,"hasToken":false},"hypothesisId":"H1","timestamp":1771164401895}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":false},"hypothesisId":"H1","timestamp":1771164411268}
+{"location":"src/middleware.js:redirect","message":"redirect to login (no token)","data":{"pathname":"/"},"hypothesisId":"H2","timestamp":1771164411269}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/login","isPublic":true,"hasToken":false},"hypothesisId":"H1","timestamp":1771164411298}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/login","isPublic":true,"hasToken":false},"hypothesisId":"H1","timestamp":1771164421855}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/login","isPublic":true,"hasToken":false},"hypothesisId":"H1","timestamp":1771164510248}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/login","isPublic":true,"hasToken":false},"hypothesisId":"H1","timestamp":1771164595924}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164596151}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771164596153}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164604867}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771164604869}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164610476}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771164610477}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164631746}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771164631748}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164634788}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/sales"},"hypothesisId":"H3","timestamp":1771164634790}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164637938}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771164637939}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164640233}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771164640234}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164648233}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771164648235}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164665578}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771164665579}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/products","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164695498}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/products"},"hypothesisId":"H3","timestamp":1771164695500}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/products","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164703204}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/products"},"hypothesisId":"H3","timestamp":1771164703206}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/products","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164703370}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/products"},"hypothesisId":"H3","timestamp":1771164703371}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/products","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164706642}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/products"},"hypothesisId":"H3","timestamp":1771164706643}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/products","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164706798}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/products"},"hypothesisId":"H3","timestamp":1771164706799}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/products","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164709673}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/products"},"hypothesisId":"H3","timestamp":1771164709675}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/products","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164709831}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/products"},"hypothesisId":"H3","timestamp":1771164709832}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/routes","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164713753}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/routes"},"hypothesisId":"H3","timestamp":1771164713755}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164714524}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/sales"},"hypothesisId":"H3","timestamp":1771164714525}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164743147}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/sales"},"hypothesisId":"H3","timestamp":1771164743150}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164745282}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771164745283}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164747560}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771164747562}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164767960}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/sales"},"hypothesisId":"H3","timestamp":1771164767962}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164768472}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771164768474}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164779809}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771164779810}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164781480}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771164781483}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164796337}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771164796339}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164803122}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771164803124}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164805192}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771164805194}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771164810504}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771164810506}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165021162}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165021164}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165021329}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165021330}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165021364}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165021365}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165021403}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165021407}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165027077}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165027078}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165028660}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165028662}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165036449}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165036451}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165041932}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165041934}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165042650}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165042651}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165108304}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771165108306}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165109614}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771165109615}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165111712}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771165111714}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165114422}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165114423}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165136366}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165136367}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165688883}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165688885}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165689022}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165689024}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165689063}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165689065}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165689109}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165689110}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165698729}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165698730}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165703470}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165703471}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165704676}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165704677}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165709157}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165709158}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165719927}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165719929}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165727591}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165727593}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165729082}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165729083}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165730353}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165730354}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165731853}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165731854}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165738952}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165738953}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165744303}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165744306}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165813069}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165813071}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165813613}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165813615}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165819127}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165819129}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165821190}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771165821192}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165854509}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771165854512}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165973918}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771165973921}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771165981053}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771165981054}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771166105450}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff"},"hypothesisId":"H3","timestamp":1771166105452}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff/6991d3a89d19bc110b1c642c/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771166107324}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff/6991d3a89d19bc110b1c642c/sales"},"hypothesisId":"H3","timestamp":1771166107326}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff/6991d3a89d19bc110b1c642c/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771166112317}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff/6991d3a89d19bc110b1c642c/sales"},"hypothesisId":"H3","timestamp":1771166112318}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771166113708}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff"},"hypothesisId":"H3","timestamp":1771166113709}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff/6991d3a89d19bc110b1c642d/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771166116484}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff/6991d3a89d19bc110b1c642d/sales"},"hypothesisId":"H3","timestamp":1771166116485}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771166167996}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771166167999}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771166621831}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771166621833}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771166747807}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771166747810}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771166748726}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771166748727}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771166756085}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771166756086}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167252518}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167252520}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167252662}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167252664}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167252700}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167252701}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167252744}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167252745}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167252790}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167252797}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167258296}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167258298}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167258335}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167258336}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167260223}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167260224}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167260266}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167260267}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167268788}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167268790}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167268836}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167268837}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167306319}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167306321}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167307805}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167307807}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167313054}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167313056}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167329578}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167329576}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167331946}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167331947}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167333008}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167333009}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167350282}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167350284}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167368657}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167368658}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167371480}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167371481}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167374554}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167374556}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167385486}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167385487}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167398448}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167398450}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167418983}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167418985}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167423435}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167423437}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167424549}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/"},"hypothesisId":"H3","timestamp":1771167424550}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167659782}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167659783}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167680348}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771167680350}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167685244}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771167685246}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167693046}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771167693048}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167698692}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771167698694}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167729012}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff"},"hypothesisId":"H3","timestamp":1771167729015}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff/6991d3a89d19bc110b1c642c/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167730579}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff/6991d3a89d19bc110b1c642c/sales"},"hypothesisId":"H3","timestamp":1771167730580}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167733739}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff"},"hypothesisId":"H3","timestamp":1771167733740}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff/6991d3a89d19bc110b1c642d/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167734931}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff/6991d3a89d19bc110b1c642d/sales"},"hypothesisId":"H3","timestamp":1771167734932}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff/6991d3a89d19bc110b1c642d/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167747192}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff/6991d3a89d19bc110b1c642d/sales"},"hypothesisId":"H3","timestamp":1771167747194}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff/6991d3a89d19bc110b1c642d/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167747522}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff/6991d3a89d19bc110b1c642d/sales"},"hypothesisId":"H3","timestamp":1771167747526}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167750923}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167750924}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167756555}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167756557}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167769422}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff"},"hypothesisId":"H3","timestamp":1771167769424}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167770506}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771167770508}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167776732}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771167776739}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167848324}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771167848326}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167881146}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/sales"},"hypothesisId":"H3","timestamp":1771167881147}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167906291}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167906292}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167928784}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167928786}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167928953}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167928956}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167929019}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167929020}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167929095}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167929099}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167929203}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167929207}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167929251}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167929252}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167929486}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167929487}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167930112}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167930115}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167930121}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167930118}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771167930546}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771167930547}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168958321}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168958323}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168958485}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168958486}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168958529}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168958530}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168958573}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168958574}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168958628}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168958629}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168985269}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168985271}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168985318}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168985319}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168989833}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168989834}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168989872}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168989877}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168991267}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168991268}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168991312}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168991313}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168992262}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168992264}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771168992312}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771168992313}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169001184}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169001186}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169001233}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169001233}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169043308}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169043309}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169047431}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169047432}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169264343}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169264346}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169281474}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169281476}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169465165}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff"},"hypothesisId":"H3","timestamp":1771169465166}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169465580}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771169465581}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169467420}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169467421}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169523311}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169523313}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169523422}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169523423}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169523433}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169523438}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169524000}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169524002}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169524054}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169524056}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169524218}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169524219}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169524285}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169524289}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169524329}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169524330}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169528126}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169528127}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169537268}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771169537269}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169539012}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169539013}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169545892}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771169545894}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169549547}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff"},"hypothesisId":"H3","timestamp":1771169549548}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff/6991d3a89d19bc110b1c642c/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169550988}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff/6991d3a89d19bc110b1c642c/sales"},"hypothesisId":"H3","timestamp":1771169550990}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169556315}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff"},"hypothesisId":"H3","timestamp":1771169556317}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff/6991d3a89d19bc110b1c642d/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169557523}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff/6991d3a89d19bc110b1c642d/sales"},"hypothesisId":"H3","timestamp":1771169557524}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169565292}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771169565293}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169574576}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771169574579}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169574874}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771169574875}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169576171}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169576173}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169577363}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169577364}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169717633}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169717635}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169719440}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169719441}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169720336}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169720337}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169911934}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169911935}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169912087}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169912088}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169912128}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169912129}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169912174}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169912175}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169912226}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169912227}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169917626}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169917628}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169917665}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169917666}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169920588}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169920589}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169920629}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169920630}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169928977}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169928978}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169929018}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169929019}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169932653}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169932654}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169932698}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169932699}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169947420}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169947421}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169950855}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169950856}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169956327}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169956329}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169957435}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169957436}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169969649}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169969651}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169979234}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169979235}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169985814}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169985815}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169988210}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169988212}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771169998670}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771169998671}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170006430}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170006431}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170017119}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170017120}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170024114}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170024116}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170026459}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170026461}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170038332}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170038334}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170076728}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170076730}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/routes","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170090830}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/routes"},"hypothesisId":"H3","timestamp":1771170090846}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170092077}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/sales"},"hypothesisId":"H3","timestamp":1771170092085}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/sales","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170101832}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/sales"},"hypothesisId":"H3","timestamp":1771170101833}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170103557}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170103558}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170115086}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771170115088}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170117198}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170117199}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170123638}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170123640}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170126725}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170126727}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170127384}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170127385}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170133230}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170133232}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170135078}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170135083}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170136566}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170136567}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170137223}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170137224}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170137436}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170137437}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170137637}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170137638}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170137931}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170137932}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170139215}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170139217}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170139837}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170139838}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170140063}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170140064}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170141237}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170141238}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170143589}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170143590}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170145221}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170145223}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170155469}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170155471}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170162341}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771170162343}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170163869}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170163870}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170165541}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170165543}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170173936}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170173938}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170178757}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170178759}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170180941}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170180943}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170183136}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771170183137}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170186956}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170186958}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170188484}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170188485}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/.well-known/appspecific/com.chrome.devtools.json","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170192642}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/.well-known/appspecific/com.chrome.devtools.json"},"hypothesisId":"H3","timestamp":1771170192644}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170204062}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170204074}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/.well-known/appspecific/com.chrome.devtools.json","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170215923}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/.well-known/appspecific/com.chrome.devtools.json"},"hypothesisId":"H3","timestamp":1771170215928}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170366205}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170366209}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170388507}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170388509}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170390633}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170390635}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170400071}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170400074}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170401587}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170401588}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170403242}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170403244}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170405947}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771170405949}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170407492}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170407493}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170442614}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170442617}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170469956}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170469959}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170524277}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170524280}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170536708}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170536710}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170539011}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170539013}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170540020}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170540021}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170543498}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170543499}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170561901}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170561900}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170569798}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170569800}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170581343}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170581345}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170725173}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170725176}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170746154}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops"},"hypothesisId":"H3","timestamp":1771170746156}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170748096}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/shops/6991d3a89d19bc110b1c642f"},"hypothesisId":"H3","timestamp":1771170748098}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170766864}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170766867}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771170784480}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771170784482}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771171006688}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771171006691}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771171007988}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771171007990}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771171008928}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771171008931}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/reports","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771171010374}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/reports"},"hypothesisId":"H3","timestamp":1771171010376}
+{"location":"src/middleware.js:entry","message":"middleware run","data":{"pathname":"/staff","isPublic":false,"hasToken":true},"hypothesisId":"H1","timestamp":1771171802323}
+{"location":"src/middleware.js:allow","message":"allow (valid token)","data":{"pathname":"/staff"},"hypothesisId":"H3","timestamp":1771171802326}

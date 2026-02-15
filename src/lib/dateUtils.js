@@ -73,6 +73,37 @@ export function getStartOfMonthPK() {
 }
 
 /**
+ * Get start of month for YYYY-MM string (e.g. 2026-01)
+ */
+export function getStartOfMonthFor(yearMonthStr) {
+  const [year, month] = yearMonthStr.split('-').map(Number);
+  return new Date(year, month - 1, 1, 0, 0, 0, 0);
+}
+
+/**
+ * Get end of month for YYYY-MM string (e.g. 2026-01 -> Jan 31 23:59:59)
+ */
+export function getEndOfMonthFor(yearMonthStr) {
+  const [year, month] = yearMonthStr.split('-').map(Number);
+  const lastDay = new Date(year, month, 0).getDate();
+  const lastDayStr = `${year}-${String(month).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}`;
+  return getEndOfDayPK(lastDayStr);
+}
+
+/**
+ * Number of full days from saleDate to referenceDate (referenceDate - saleDate).
+ * Used for "days exceeded" since sale. Returns 0 if sale is after reference.
+ */
+export function getDaysExceeded(saleDate, referenceDateStr) {
+  const refStart = getStartOfDayPK(referenceDateStr);
+  const saleKey = getDateKeyPK(saleDate);
+  const saleStart = getStartOfDayPK(saleKey);
+  const diffMs = refStart.getTime() - saleStart.getTime();
+  const days = Math.floor(diffMs / (24 * 60 * 60 * 1000));
+  return Math.max(0, days);
+}
+
+/**
  * Format date for display in PK timezone
  */
 export function formatDatePK(date, options = {}) {
