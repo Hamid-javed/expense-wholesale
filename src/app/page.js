@@ -6,6 +6,8 @@ import { Card, CardBody, CardHeader } from "../components/ui/Card";
 import { PageHeader } from "../components/layout/PageHeader";
 import { getStartOfTodayPK, getStartOfMonthPK } from "../lib/dateUtils";
 
+export const revalidate = 10;
+
 async function getDashboardData() {
   await connectToDatabase();
 

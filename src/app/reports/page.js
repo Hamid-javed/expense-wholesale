@@ -20,9 +20,10 @@ import { INVOICE_PREFIX } from "../../lib/config";
 export const dynamic = "force-dynamic";
 
 export default async function ReportsPage({ searchParams }) {
-  await connectToDatabase();
-
-  const search = await searchParams;
+  const [, search] = await Promise.all([
+    connectToDatabase(),
+    searchParams,
+  ]);
   const todayStr = getTodayPK();
   const period =
     search?.period === "monthly"
